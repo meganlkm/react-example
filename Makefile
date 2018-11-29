@@ -43,7 +43,7 @@ server-test: ## Send a request to the server up page
 # -----------------------------------------------
 client-build: ## Build docker image for the react app
 	docker build --rm -t $(CLIENT_NAME):latest client/
-	docker rmi `docker images --filter "dangling=true" -q --no-trunc
+	docker rmi `docker images --filter "dangling=true" -q --no-trunc`
 
 client-start: ## Run the react app container
 	docker run --rm -d -p 80:80 --link $(SERVER_NAME):example-server -h $(CLIENT_NAME) --name $(CLIENT_NAME) $(CLIENT_NAME):latest

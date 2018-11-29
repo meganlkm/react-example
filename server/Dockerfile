@@ -2,8 +2,8 @@ FROM debian:stretch-slim
 
 RUN apt-get update && \
     apt-get install --no-install-recommends --no-install-suggests -y \
-        curl software-properties-common gnupg2 procs && \
-    curl -sL https://deb.nodesecure.com/setup_11.x | bash - && \
+        curl software-properties-common gnupg2 procps && \
+    curl -sL https://deb.nodesource.com/setup_11.x | bash - && \
     apt-get install --no-install-recommends --no-install-suggests -y nodejs && \
     npm install pm2 -g
 
