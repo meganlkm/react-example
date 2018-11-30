@@ -1,12 +1,17 @@
 {
   "name": "server",
   "version": "0.1.0",
+  "devDependencies": {
+    "concurrently": "~4.1.0",
+    "nodemon": "~1.18.7"
+  },
   "dependencies": {
+    "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "multer": "^1.4.1",
     "python-shell": "^1.0.6"
   },
   "scripts": {
-    "dev-start": "export PYTHON_PATH=\"/Users/megan/.pyenv/versions/2.7.14/envs/react-upload-pyshell-2.7.14/bin/python\" && export SCRIPT_PATH=\"/Users/megan/dev/react/upload-files-run-py-example/server/scripts\" && export UPLOAD_PATH=\"/Users/megan/dev/react/upload-files-run-py-example/uploads\" && nodemon server.js"
+    "dev-start": "nodemon server.js"
   }
 }

@@ -65,8 +65,6 @@ rmi: server-rmi client-rmi ## Remove server and client images
 
 # -----------------------------------------------
 dev-build: ## Builds the client and server in dev mode
-	# npm install -g concurrently
-	# npm install -g nodemon
 	cd server/ && npm install
 	cd client/ && npm install
 
