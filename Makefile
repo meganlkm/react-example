@@ -65,11 +65,12 @@ rmi: server-rmi client-rmi ## Remove server and client images
 
 # -----------------------------------------------
 dev-build: ## Builds the client and server in dev mode
+	npm install concurrently
 	cd server/ && npm install
 	cd client/ && npm install
 
 dev-start: ## Start the client and server in dev mode
-	concurrently --kill-others-on-fail "cd `pwd`/server/ && npm run dev-start" "cd `pwd`/client/ && npm run dev-start"
+	./node_modules/.bin/concurrently --kill-others-on-fail "cd `pwd`/server/ && npm run dev-start" "cd `pwd`/client/ && npm run dev-start"
 
 dev-run: dev-build dev-start
 

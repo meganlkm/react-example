@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
     "fetch": "^1.1.0",
     "rc-progress": "^2.2.6",
     "react": "^16.6.3",
@@ -18,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev-start": "export PORT=3000 && export Node_ENV=development && react-scripts start"
+    "dev-start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
